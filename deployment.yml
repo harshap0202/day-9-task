@@ -17,3 +17,8 @@ spec:
         image: harshpatil02/custom-nginx-image:latest
         ports:
         - containerPort: 80
+        resources:
+          limits:
+           cpu: 50m
+          requests:
+           cpu: 20m
