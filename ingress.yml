@@ -16,8 +16,8 @@ spec:
   - host: minikube.ip
     http:
       paths:
-      - path: /live
-        pathType: Exact
+      - path: /main
+        pathType: Prefix
         backend:
           service:
             name: nginx-static-site-service
@@ -26,7 +26,7 @@ spec:
   - host: new.minikube
     http:
       paths:
-      - path: /new-path
+      - path: /other
         pathType: Prefix
         backend:
           service:
